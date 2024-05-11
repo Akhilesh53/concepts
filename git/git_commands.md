@@ -29,7 +29,7 @@ Cons: Loss of commit details
       Loss Tracebility
 
 ---------------------------------------------
-git reset , git checkout , git revert
+Git reset , Git checkout , git revert
 ---------------------------------------------
 git checkout: 
     it is basially used to migrate to another branch.
