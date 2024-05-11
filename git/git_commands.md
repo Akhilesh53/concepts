@@ -31,4 +31,4 @@ Cons: Loss of commit details
 ---------------------------------------------
 Git reset , Git checkout , git revert
 ---------------------------------------------
-
+dfxgchvjbknlm;,
