@@ -27,3 +27,8 @@ Squash Commits:
 Pros: Clear and concise commit history
 Cons: Loss of commit details
       Loss Tracebility
+
+---------------------------------------------
+Git reset , Git checkout , git revert
+---------------------------------------------
+
