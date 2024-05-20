@@ -84,3 +84,11 @@ git clean --force or -f : it will not ask before removing all untracked files
 git clean -dn : -d will consider the untracked directory to remove files and n means same as above
 git clean -df : -d will consider the untracked directory to remove files and f means same as above
 git clean -x :  by default git clean ignores all the files in .gitignore, bit -x considers all the files in .gitignore
+
+------------------------------------------------------------
+git rm
+------------------------------------------------------------
+used to remove files from git repository
+
+how to undo git rm:
+- git reset HEAD
