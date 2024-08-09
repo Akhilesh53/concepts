@@ -1,0 +1,18 @@
+# version of the kubernetes api
+apiVersion: v1
+# type of the kubernetes object
+kind: Pod
+# metadata of the pod
+# within metadata, only kubernetes expected k-v pairs are allowed
+metadata:
+  name: nginx
+  # under labels, we can define any key-value pairs
+  labels:
+    env: prod
+# spec of the pod
+spec:
+  # containers is a list of containers that are part of the pod
+  containers:
+  - name: nginx
+    image: nginx
+

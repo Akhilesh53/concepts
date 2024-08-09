@@ -1,0 +1,36 @@
+# in replicaation controller, we have v1 but in replica set, we have to write apps/v1
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-replicaset
+  labels:
+    name: nginx
+
+spec:
+  # template is like which pod to be created/ take care of in replicas
+  template:
+    metadata:
+      name: nginx
+      labels:
+        env: prod
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+
+  # no of replicas in a pod   
+  replicas: 2
+
+  # the difference between replication controller and replica set is that in replica set, we have selector
+  # selector is used to select/ take care the pod based on the labels
+  selector:
+    # there are two option match labels/ containers
+    # labels matches with labels specified
+    matchLabels:
+      # write labels/ containers defined in a pod
+      env: prod # taken from pod.yaml/ pod specifications mentioned above
+                # not only this, all the pods with label env: prod will be taken care of by replica set
+
+
+
+

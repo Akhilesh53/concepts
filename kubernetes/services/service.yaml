@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+
+spec:
+  # add the type of service to be used
+  # ClusterIP
+  # LoadBalancer 
+  type: NodePort   
+  # for node port, we have to define the ports
+  ports:
+  - port: 80 # port on service side
+    targetPort: 80 # port on which pod is running
+    # port which will be used by external app to hit the service
+    # if not defined, free port will be assigned directly 
+    nodePort: 30004
+ 
+  # select what all pods to lister
+  selector:
+    app: myapp

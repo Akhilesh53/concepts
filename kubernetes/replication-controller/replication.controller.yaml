@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp-rc
+# spec of the replication controller
+# under the spec, there is one tag for template
+spec:
+  # under this template, we have to define the metadata and spec of the pod
+  # what so ever we write in pod definition yaml, same has to be pasted in here.
+  template:
+    metadata:
+      name: nginx
+      # under labels, we can define any key-value pairs
+      labels:
+        env: sit
+        type: test-pod
+        app: nginx
+    # spec of the pod
+    spec:
+      # containers is a list of containers that are part of the pod
+      containers:
+      - name: nginx
+        image: nginx
+  # replicas is the number of pods that we want to run
+  replicas: 3
+
